@@ -1,0 +1,90 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.loading-cat {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.quiz {
+    display: none;
+    width: 90%;
+    margin: 5em auto;
+    border: 3px solid;
+    padding: 2em;
+    background: rgba(240, 248, 255, 0.48);
+}
+
+.quiz label {
+    font-size: 2.5em;
+    padding: 0.3em;
+    line-height: 1em;
+    color: black;
+}
+
+.quiz label:before {
+    content: "# ";
+}
+
+.quiz input[type="text"]{
+    height: 3em;
+    border: 3px inset #92A6B5;
+}
+.quiz input[type="submit"] {
+    height: 3em;
+    width: 10em;
+    background: #E91E63;
+    border: double 1px ghostwhite;
+    transition: all 0.5s ease-out;
+}
+
+.quiz input[type="submit"]:hover {
+    background: #F44336;
+}
+
+h1, h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: fantasy;
+    text-transform: uppercase;
+    text-shadow: #FFEB3B 3px 5px;
+    visibility: hidden;
+}
+
+h2 {
+    font-size: 4em;
+    color: #795548;
+    height: auto;
+    padding: 20px;
+    transition: 30ms;
+    line-height: 2;
+
+}
+
+h1 {
+    font-size: 7em !important;
+    color: #bc4a1e;
+    height: 200px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+canvas {
+    position: fixed !important;
+    z-index: -1;
+}
+
+/* CSS declarations go here */

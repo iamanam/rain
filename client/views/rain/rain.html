@@ -1,0 +1,49 @@
+<head>
+    <title>rain</title>
+</head>
+
+<body>
+</body>
+
+<template name="rain">
+    {{>quiz}}
+    {{> pic}}
+</template>
+
+
+<template name="pic">
+    {{>loading}}
+    <img id="background" src="">
+
+    <div id="animation"></div>
+</template>
+
+<template name="text">
+    <h1 class="tlt" data-in-effect="fadeIn">Hey Barsha!</h1>
+
+    <h2 class="tlt">
+        <ul class="texts">
+            <li data-in-effect="fadeIn">You see its raining..</li>
+            <li data-in-effect="fadeIn">hope you like it.</li>
+            <li data-in-effect="fadeIn" data-out-effect="fadeOut">Yeah..its awkward.But its true i wanna get wet in your
+                touch.
+            </li>
+        </ul>
+    </h2>
+</template>
+<template name="quiz">
+    <div class="quiz">
+        <label>{{question}}</label>
+
+        <form class="question">
+            <input type="text" class="ans" placeholder="type your answer please">
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+</template>
+
+
+<template name="loading">
+    <img src="/images/load.gif" alt="loading" class="loading-cat">
+</template>
