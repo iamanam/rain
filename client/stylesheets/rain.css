@@ -19,17 +19,22 @@ img {
 }
 
 .quiz {
+    padding: 3em;
+    margin: 0 auto;
     display: none;
+}
+
+.question {
     width: 90%;
-    margin: 5em auto;
     border: 3px solid;
-    padding: 2em;
     background: rgba(240, 248, 255, 0.48);
+    margin-bottom: 10px;
+    padding: 1em;
 }
 
 .quiz label {
     font-size: 2.5em;
-    padding: 0.3em;
+    padding: 0.5em;
     line-height: 1em;
     color: black;
 }
@@ -38,10 +43,11 @@ img {
     content: "# ";
 }
 
-.quiz input[type="text"]{
+.quiz input[type="text"] {
     height: 3em;
     border: 3px inset #92A6B5;
 }
+
 .quiz input[type="submit"] {
     height: 3em;
     width: 10em;
@@ -85,6 +91,31 @@ h1 {
 canvas {
     position: fixed !important;
     z-index: -1;
+}
+
+label.error {
+    color: #F44336;
+    font-family: fantasy;
+    display: none;
+    font-size: 2em;
+}
+
+.step {
+    width: 100px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    transition: background 1s 0s;
+}
+
+.step-unfinish {
+    background: #00aaee;
+
+}
+
+.step-finish {
+    background: #ebee12;
 }
 
 /* CSS declarations go here */

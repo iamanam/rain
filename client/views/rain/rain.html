@@ -19,30 +19,38 @@
 </template>
 
 <template name="text">
-    <h1 class="tlt" data-in-effect="fadeIn">Hey Barsha!</h1>
+    <h1 class="tlt" data-in-effect="fadeIn">Hey <span>Barsha!</span></h1>
 
     <h2 class="tlt">
         <ul class="texts">
             <li data-in-effect="fadeIn">You see its raining..</li>
             <li data-in-effect="fadeIn">hope you like it.</li>
-            <li data-in-effect="fadeIn" data-out-effect="fadeOut">Yeah..its awkward.But its true i wanna get wet in your
-                touch.
+            <li data-in-effect="fadeIn" data-out-effect="fadeOut">Yeah..its awkward.But its true i wanna get wet in your touch.
             </li>
         </ul>
     </h2>
 </template>
 <template name="quiz">
     <div class="quiz">
-        <label>{{question}}</label>
-
+        <div class="intro"><h3>Lets play..</h3></div>
         <form class="question">
+            <label>{{question}}</label>
             <input type="text" class="ans" placeholder="type your answer please">
+            <label class="error">Incorrect Answer!! Try again.</label>
             <input type="submit" value="Submit">
         </form>
-
+        {{>step}}
     </div>
 </template>
 
+<template name="step">
+    <div id="stephold">
+        {{#each questionSet}}
+            <div class="step step-unfinish" data-id="{{@index}}"></div>
+        {{/each}}
+
+    </div>
+</template>
 
 <template name="loading">
     <img src="/images/load.gif" alt="loading" class="loading-cat">
