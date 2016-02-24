@@ -3,25 +3,20 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: #9E9E9E;
 }
 
-img {
+img#background {
     width: 100%;
     height: 100%;
-    visibility: hidden;
-}
-
-.loading-cat {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    background: url("images/load.gif") no-repeat center;
+    position: absolute;
+    z-index: -1;
 }
 
 .quiz {
     padding: 3em;
     margin: 0 auto;
-    display: none;
 }
 
 .question {
@@ -32,15 +27,103 @@ img {
     padding: 1em;
 }
 
-.quiz label {
+.question ul, .question ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.question ul {
+    height: 220px;
+}
+
+.quiz label.question-label {
     font-size: 2.5em;
     padding: 0.5em;
     line-height: 1em;
     color: black;
 }
 
-.quiz label:before {
-    content: "# ";
+.result-box {
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.result-box h4 {
+    display: block;
+    font-size: 3em;
+    padding: 10px;
+    background: darkcyan;
+    font-family: monospace;
+    text-align: center;
+    /* width: 30%; */
+    border: 2px solid gainsboro;
+    margin: 5px;
+}
+
+.ansBox {
+    list-style: none;
+    font-size: 2em;
+    padding: 2%;
+    font-size: 1.5em;
+    font-family: monospace;
+    color: azure;
+}
+
+.ansBox li {
+    padding: 10px;
+    display: block;
+    box-shadow: -2px -8px 9px #607D8B;
+
+}
+
+.ansBox li:nth-child(even) {
+    margin-bottom: 20px;
+    box-shadow: 2px 8px 9px #607D8B;
+}
+
+.ansBox li:nth-child(odd) {
+}
+
+.quiz ul li {
+    color: #AAAAAA;
+    display: block;
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 70px;
+    background: cadetblue;
+    margin: 2.5%;
+    box-shadow: 3px 3px #667F7F;
+    cursor: pointer;
+}
+
+.quiz ul li:hover {
+    background: #a02530;
+    box-shadow: 3px 3px #7f1124;
+}
+
+.quiz ul li input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.quiz ul li label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 15px 15px 15px 50px;
+    margin: 10px auto;
+    height: 30px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    color: black;
+    text-transform: capitalize;
+}
+
+.quiz ul li:hover label {
+    color: #FFFFFF;
 }
 
 .quiz input[type="text"] {
@@ -62,30 +145,27 @@ img {
 
 h1, h2 {
     display: block;
-    width: 100%;
     text-align: center;
     font-family: fantasy;
     text-transform: uppercase;
     text-shadow: #FFEB3B 3px 5px;
-    visibility: hidden;
 }
 
 h2 {
     font-size: 4em;
     color: #795548;
-    height: auto;
     padding: 20px;
     transition: 30ms;
     line-height: 2;
-
 }
 
 h1 {
     font-size: 7em !important;
     color: #bc4a1e;
-    height: 200px;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
+    border-bottom: 10px solid beige;
+
 }
 
 canvas {
@@ -100,11 +180,15 @@ label.error {
     font-size: 2em;
 }
 
+#stephold {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
 .step {
-    width: 100px;
+    flex-basis: 100px;
     height: 20px;
-    display: block;
-    float: left;
     margin-right: 5px;
     transition: background 1s 0s;
 }

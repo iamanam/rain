@@ -20,3 +20,6 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 reactive-var
+reactive-dict
+aldeed:template-extension
+webtempest:animate
