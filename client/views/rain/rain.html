@@ -6,8 +6,17 @@
 </body>
 
 <template name="rain">
-    {{>quiz}}
-    {{> pic}}
+    <div class="container">
+        {{#if step 1}}
+            {{> pic}}
+        {{else}}
+            {{# if step 2}}
+                {{>quiz}}
+            {{else}}
+                {{>resultshow}}
+            {{/if}}
+        {{/if}}
+    </div>
 </template>
 
 
@@ -25,23 +34,38 @@
         <ul class="texts">
             <li data-in-effect="fadeIn">You see its raining..</li>
             <li data-in-effect="fadeIn">hope you like it.</li>
-            <li data-in-effect="fadeIn" data-out-effect="fadeOut">Yeah..its awkward.But its true i wanna get wet in your touch.
+            <li data-in-effect="fadeIn" data-out-effect="fadeOut">Yeah..its awkward.But its true i wanna get wet in
+                your
+                touch.
             </li>
         </ul>
     </h2>
 </template>
 <template name="quiz">
     <div class="quiz">
+
         <div class="intro"><h3>Lets play..</h3></div>
         <form class="question">
-            <label>{{question}}</label>
-            <input type="text" class="ans" placeholder="type your answer please">
-            <label class="error">Incorrect Answer!! Try again.</label>
-            <input type="submit" value="Submit">
+            <label class="question-label">{{question}}</label>
+
+            {{#if possibleAns}}
+                <ul>
+                    {{#each possibleAns}}
+                        <li>
+                            <label class="option-val" for="f-option">{{this}}</label>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <input type="text" class="ans" required min="2" placeholder="type your answer please">
+                <label class="error">Incorrect Answer!! Try again.</label>
+                <input type="submit" value="Submit">
+            {{/if}}
         </form>
         {{>step}}
     </div>
 </template>
+
 
 <template name="step">
     <div id="stephold">
@@ -49,6 +73,14 @@
             <div class="step step-unfinish" data-id="{{@index}}"></div>
         {{/each}}
 
+    </div>
+</template>
+
+<template name="resultshow">
+    <div class="result-box">
+        <div id="header-plugin"></div>
+        <div class="bg_heart"></div>
+        <h3> Based on your answer, You will unlock something.</h3>
     </div>
 </template>
 
