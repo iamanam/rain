@@ -1,3 +1,4 @@
+<!--
 <head>
     <title>rain</title>
 </head>
@@ -31,31 +32,64 @@
         </ul>
     </h2>
 </template>
-<template name="quiz">
-    {{#animate type="lightSpeedIn" delay="300"}}
 
-        <div class="quiz">
-            <div class="intro"><h3>Lets play..</h3></div>
-            <form class="question">
-                <label class="question-label">{{dataQ}}</label>
+<!----------------------------------------------------------template typedElement-------------------------------------------------------------->
+<!--
+<template name="typedElement">
+    <div class="typedElement">
+        <h1 class="animated bounceInDown">Lets play a Game!!</h1>
 
-                {{#if possibleAns}}
-                    <ul>
-                        {{#each possibleAns}}
-                            <li>
-                                <label class="option-val" for="f-option">{{this}}</label>
-                            </li>
-                        {{/each}}
-                    </ul>
-                {{else}}
-                    <input type="text" class="ans" required min="2" placeholder="type your answer please">
-                    <label class="error">Incorrect Answer!! Try again.</label>
-                    <input type="submit" value="Submit">
-                {{/if}}
-            </form>
-            {{>step}}
+        <h2 class="animated shake"> There will be a simple quiz, Where i will try to find your view.</h2>
+
+        <div class="typedbox">
+            <span id="typed"></span>
+            <span id="indicator"></span>
         </div>
-    {{/animate}}
+
+        <div id="ruleBox">
+            <div class="img_ani animated slideInLeft">
+                <img src="images/teacherrules.gif ">
+            </div>
+            <ul class="li_place fa-ul">
+
+            </ul>
+        </div>
+        <button class="agree">Agree</button>
+    </div>
+</template>
+
+<!----------------------------------------------template quiz------------------------------------------
+<template name="quiz">
+    <div class="quiz">
+        {{#animate type="lightSpeedIn" delay="500"}}
+            <div class="formContainer">
+                <div class="intro">
+                    <h3>Lets play..</h3>
+
+                </div>
+                <form class="question">
+                    <label class="question-label">{{dataQ}}</label>
+
+                    {{#if possibleAns}}
+                        <ul>
+                            {{#each possibleAns}}
+                                <li>
+                                    <label class="option-val"
+                                           data-mark={{getMark @index}} for="f-option">{{this}}</label>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    {{else}}
+                        <input type="text" class="ans" required min="2" placeholder="type your answer please">
+                        <label class="error">Incorrect Answer!! Try again.</label>
+                        <input type="submit" value="Submit">
+                    {{/if}}
+                </form>
+                {{>step}}
+            </div>
+        {{/animate}}
+
+    </div>
 </template>
 
 
@@ -67,23 +101,4 @@
 
     </div>
 </template>
-
-<template name="resultshow">
-    {{#animate type="slideInLeft" delay="300"}}
-        <div class="result-box">
-            <h4> Review</h4>
-        <ul class="ansBox">
-            {{#each getDetail}}
-                    <li>Q: {{getQus @index}}</li>
-                    <li>
-                        Ans: {{this}}
-                    </li>
-            {{/each}}
-        </ul>
-        </div>
-    {{/animate}}
-</template>
-
-<template name="loading">
-    <img src="/images/load.gif" alt="loading" class="loading-cat">
-</template>
+-->

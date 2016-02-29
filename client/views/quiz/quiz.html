@@ -1,0 +1,40 @@
+<template name="quiz">
+    <div class="quiz">
+        {{#animate type="lightSpeedIn" delay="500"}}
+            <div class="formContainer">
+                <div class="intro">
+                    <h3>Lets play..</h3>
+
+                </div>
+                <form class="question">
+                    <label class="question-label">{{dataQ}}</label>
+
+                    {{#if possibleAns}}
+                        <ul>
+                            {{#each possibleAns}}
+                                <li>
+                                    <label class="option-val"
+                                           data-mark={{getMark @index}} for="f-option">{{this}}</label>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    {{else}}
+                        <input type="text" class="ans" required min="2" placeholder="type your answer please">
+                        <label class="error">Incorrect Answer!! Try again.</label>
+                        <input type="submit" value="Submit">
+                    {{/if}}
+                </form>
+                {{>step}}
+            </div>
+        {{/animate}}
+
+    </div>
+</template>
+<template name="step">
+    <div id="stephold">
+        {{#each questionSet}}
+            <div class="step step-unfinish" data-id="{{@index}}"></div>
+        {{/each}}
+
+    </div>
+</template>

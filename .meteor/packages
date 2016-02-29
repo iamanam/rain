@@ -23,3 +23,6 @@ reactive-var
 reactive-dict
 aldeed:template-extension
 webtempest:animate
+mquandalle:bower
+fortawesome:fontawesome
+stylus

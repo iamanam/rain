@@ -5,7 +5,7 @@
 Router.route("/", {
     self: this,
     action: function () {
-            this.render("rain");
+            this.render("index");
     },
     loadingTemplate: "loading"
 });

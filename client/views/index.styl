@@ -1,0 +1,34 @@
+@import "../stylesheets/global.styl"
+
+get_container(header_footer_height)
+  get_container = 100 - header_footer_height
+
+body
+  font 12px Helvetica, Arial, sans-serif
+  display flex
+  flex-direction column
+
+header, footer
+  flex-basis 8%
+  left 0
+
+header
+  top 0
+  background-color rgba(96, 125, 139, 0.46)
+
+.container
+  flex-basis 100% - header_footer_height
+  border-bottom 1px solid #9E9E9E
+  border-top 1px solid #9E9E9E
+
+footer
+  bottom 0
+  background-color rgba(96, 125, 139, 0.63)
+
+  h4
+    display block
+    text-align center
+    margin 1vw auto
+    font-size 1.5vw
+    width 30%
+    border-bottom 1px solid black

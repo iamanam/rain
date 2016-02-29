@@ -1,0 +1,41 @@
+
+
+<template name="review">
+    {{#animate type="slideInLeft" delay="300"}}
+        <div class="result-box">
+            <h2 class="tlt" data-in-effect="fadeIn">Now its time for the final Part. <span>!</span></h2>
+
+            <h3 class="tlt ">
+                <ul class="texts fa-ul">
+                    <li data-in-effect="fadeIn"><i class='fa-li fa fa-check-square'></i>
+                        As i said before you can face one possible outcome out of two.
+                    </li>
+                    <li data-in-effect="fadeIn"><i class='fa-li fa fa-check-square'></i>
+                        Those outcome are already set and will be chosen one by you.
+                    </li>
+                    <li data-in-effect="fadeIn"><i class='fa-li fa fa-check-square'></i>
+                        There were {{markAchieved.countQ}} Question.
+                    </li>
+                    <li data-in-effect="fadeIn"
+                        data-out-effect="fadeOut"><i class='fa-li fa fa-check-square'></i>
+                        In scale of 10, Total mark= {{markAchieved.possibleTotal}}
+                    </li>
+                    <li data-in-effect="fadeIn"
+                        data-out-effect="fadeOut"><i class='fa-li fa fa-check-square'></i>
+                        You achieved {{markAchieved.allQ}}
+                    </li>
+                </ul>
+            </h3>
+            <!--
+            <ul class="ansBox">
+                {{#each getDetail}}
+                    <li>Q: {{getQus @index}}</li>
+                    <li>
+                        Ans: {{this}}
+                    </li>
+                {{/each}}
+            </ul>
+            -->
+        </div>
+    {{/animate}}
+</template>

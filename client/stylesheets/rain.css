@@ -14,6 +14,92 @@ img#background {
     z-index: -1;
 }
 
+#ruleBox {
+    display: flex;
+}
+
+#ruleBox ul.li_place {
+    display: flex;
+    text-transform: uppercase;
+    padding-left: 30px;
+    font-family: monospace;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+#ruleBox .img_ani {
+    flex-grow: 1;
+}
+
+.li_place li.li_rule {
+    padding: 5px;
+    font-size: 2vw;
+    color: crimson;
+    margin: 5px;
+}
+
+.typedElement {
+    padding: 2%;
+}
+
+.typedElement h1 {
+    font-size: 4vmax;
+    display: block;
+    background: #CDDC39;
+    padding: 5px;
+    border: 1vw solid gray;
+    color: brown;
+    margin: 0;
+}
+
+.typedbox {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 60px;
+}
+
+#typed {
+    font-size: 2em;
+    text-transform: capitalize;
+    font-family: monospace;
+    text-align: center;
+}
+
+#typed:after {
+    content: "|";
+}
+
+#indicator {
+    height: 10px;
+    animation-name: grow;
+    display: block;
+    animation-timing-function: linear;
+    margin-top: 15px;
+    opacity: 0;
+    animation-delay: 5000ms;
+}
+
+@keyframes grow {
+    from {
+        width: 0%;
+        background: aliceblue;
+        opacity: .4;
+    }
+    to {
+        width: 100%;
+        background: yellow;
+        opacity: 1;
+    }
+
+}
+
+button.agree {
+    width: 100%;
+    height: 25px;
+}
+
 .quiz {
     padding: 3em;
     margin: 0 auto;
@@ -43,23 +129,6 @@ img#background {
     color: black;
 }
 
-.result-box {
-    margin: 0 auto;
-    padding: 3%;
-}
-
-.result-box h4 {
-    display: block;
-    font-size: 3em;
-    padding: 10px;
-    background: darkcyan;
-    font-family: monospace;
-    text-align: center;
-    /* width: 30%; */
-    border: 2px solid gainsboro;
-    margin: 5px;
-}
-
 .ansBox {
     list-style: none;
     font-size: 2em;
@@ -82,6 +151,10 @@ img#background {
 }
 
 .ansBox li:nth-child(odd) {
+}
+
+.formContainer {
+    opacity: 0;
 }
 
 .quiz ul li {
@@ -151,7 +224,7 @@ h1, h2 {
     text-shadow: #FFEB3B 3px 5px;
 }
 
-h2 {
+h2.tlt {
     font-size: 4em;
     color: #795548;
     padding: 20px;
@@ -159,7 +232,7 @@ h2 {
     line-height: 2;
 }
 
-h1 {
+h1.tlt {
     font-size: 7em !important;
     color: #bc4a1e;
     width: 80%;
@@ -200,6 +273,34 @@ label.error {
 
 .step-finish {
     background: #ebee12;
+}
+
+.texts {
+    font-size: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.result-box {
+    margin: 0 auto;
+    padding: 3%;
+    width: 85%;
+}
+
+.result-box li {
+    margin: 5px;
+}
+
+.result-box h3 {
+    display: block;
+    font-size: 3vw;
+    font-family: monospace;
+    margin: 5px;
+}
+
+.result-box h2 {
+    font-size: 4vw;
 }
 
 /* CSS declarations go here */
