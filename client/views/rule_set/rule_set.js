@@ -20,7 +20,7 @@ Template.rule_set.rendered = function () {
                 "Each question will contain 10 marks"],
             stringsElement: $('#typed-strings'),
             liPlace: $(".li_place"),
-            typeSpeed: 100,
+            typeSpeed: 10,
             arrayPos: 0,
             startDelay: 5000,
             showCursor: false,
@@ -31,13 +31,14 @@ Template.rule_set.rendered = function () {
             callback: function () {
                 setTimeout(function () {
                     $("span#typed").hide().next().hide();
+                    $("button.agree").show();
                 }, 2000)
             },
             // call when done callback function
             onStringTyped: function () {
                 $("#indicator").hide();
                 let li = this.strings[this.arrayPos];
-                this.liPlace.prepend("<li class='animated slideInRight li_rule'><i class='fa-li fa fa-check-square'></i>" + li + "</li>");
+                this.liPlace.prepend("<li class='animated slideInRight li_rule'><i class='fa-li fa fa-check-square'>⚛</i>" + li + "</li>");
                 this.arrayPos++;
             },
             // starting callback function before each string

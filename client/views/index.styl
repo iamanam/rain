@@ -7,28 +7,42 @@ body
   font 12px Helvetica, Arial, sans-serif
   display flex
   flex-direction column
+  overflow hidden
+  height 100%
+  background #9E9E9E
+  no-extra()
+  img#background
+    width 100%
+    height 100%
+    background url("images/load.gif") no-repeat center
+    position absolute
+    z-index -1
 
-header, footer
-  flex-basis 8%
-  left 0
+  header, footer
+    flex-basis 8%
+    left 0
 
-header
-  top 0
-  background-color rgba(96, 125, 139, 0.46)
+  header
+    top 0
+    background-color rgba(96, 125, 139, 0.46)
 
-.container
-  flex-basis 100% - header_footer_height
-  border-bottom 1px solid #9E9E9E
-  border-top 1px solid #9E9E9E
+  .container
+    flex-basis 100% - header_footer_height
+    border-bottom 1px solid #9E9E9E
+    border-top 1px solid #9E9E9E
+  canvas
+    position fixed !important
+    z-index -1
 
-footer
-  bottom 0
-  background-color rgba(96, 125, 139, 0.63)
+  footer
+    bottom 0
+    background-color rgba(96, 125, 139, 0.63)
 
-  h4
-    display block
-    text-align center
-    margin 1vw auto
-    font-size 1.5vw
-    width 30%
-    border-bottom 1px solid black
+    h4
+      display block
+      text-align center
+      margin 1vw auto
+      font-size 1.5vw
+      width 30%
+      border-bottom 1px solid darkgray
+      color darkgray

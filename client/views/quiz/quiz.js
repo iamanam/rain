@@ -7,7 +7,7 @@ Template.quiz.created = function () {
 Template.quiz.helpers({
     dataQ: ()=> {
         return question.length - 1 >= Template.instance().counter.get() ?
-            question[Template.instance().counter.get()] : step.set("resultshow");
+            question[Template.instance().counter.get()] : step.set("review");
     },
     possibleAns: () => {
         const optionAns = [
@@ -32,7 +32,7 @@ Template.quiz.events({
         answerSet.push(qusAns);//save the answer
         //go to next step
         mark.push(parseInt(event.target.getAttribute("data-mark") || tem.$(".ans").val()));
-        tem.$(".step").eq(tem.counter.get()).removeClass(".step-unfinish").addClass("step-finish");
+        tem.$("span>i").eq(tem.counter.get()).removeClass(".fa-square-o").addClass("fa-square");
         tem.counter.set(tem.counter.get() + 1);
         console.log(mark);
     }

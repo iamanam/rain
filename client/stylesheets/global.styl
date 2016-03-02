@@ -1,2 +1,45 @@
 fonts = helvetica, arial, sans-serif
-header_footer_height=8
+header_footer_height = 8
+textMain = 5vw;
+textSecondary = 3vw;
+
+//global mixin
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+no-extra()
+  margin 0
+  padding 0
+
+h1, h2 {
+  display: block;
+  text-align: center;
+  font-family: fantasy;
+  text-transform: uppercase;
+}
+
+headText(fontS)
+  font-size fontS
+  display block
+  background #CDDC39
+  padding 5px
+  border 1vw solid gray
+  color brown
+  margin 0
+
+headSecondaryText(size, pad, margin, color)
+  font-size: size;
+  color: color;
+  margin margin
+  padding: pad;
+  transition: 30ms;
+  line-height: 2;
+  text-shadow #FF9800 2px -1px
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n

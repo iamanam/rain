@@ -23,7 +23,7 @@ Template.welcome.onRendered(function () {
                 initialDelay: 4500,
                 type: "char",
                 callback: function () {
-                    return step.set("typedElement");
+                    return step.set("rule_set");
                 }
             })
         }, 3000);
