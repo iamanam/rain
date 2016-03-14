@@ -1,49 +1,46 @@
 @import "../../stylesheets/global.styl"
 #rule_set
   padding 2%
+  .typedbox
+    margin-top 10px
+    display flex
+    flex-direction column
+    min-height 60px
+    font-size 1vw
+    #typed
+      font-size 1.5em
+      text-transform capitalize
+      font-family monospace
+      width auto
+      background-color aliceblue
+      padding .5vw
+      border-radius .5vw
+      &:before
+       content ">> "
+      &:after
+        content "|"
+
+      /*animation-delay 5000ms*/
+
+    @keyframes grow {
+      from {
+        width 0%
+        background aliceblue
+        opacity .4
+      }
+      to {
+        width 100%
+        background yellow
+        opacity 1
+      }
+    }
+
   .rule_info
     h1
-      headText(4vw)
+      headText(3vw)
       border-color #4CAF50
     h2 //headSecondaryText(size,pad,margin)
       headSecondaryText(3vw, 5px, 5px, #F44336)
-
-    .typedbox
-      margin-bottom 10px
-      display flex
-      flex-direction column
-      min-height 60px
-
-      #typed
-        font-size 2em
-        text-transform capitalize
-        font-family monospace
-        text-align center
-        &:after
-          content "|"
-
-      #indicator
-        height 10px
-        animation-name grow
-        display block
-        animation-timing-function linear
-        margin-top 15px
-        opacity 0
-        animation-delay 5000ms
-
-      @keyframes grow {
-        from {
-          width 0%
-          background aliceblue
-          opacity .4
-        }
-        to {
-          width 100%
-          background yellow
-          opacity 1
-        }
-      }
-
   button
     &.agree
       width 100%
@@ -52,6 +49,7 @@
 
 #ruleBox
   display flex
+  margin-top 20px
   .img_ani
     flex-basis auto
     flex-grow 0
@@ -70,8 +68,7 @@
     color #CDDC39
     .li_rule
       padding .5vw
-      font-size 2vw
-      margin .5vw
+      font-size 1.5vw
       font-weight bold
 
 .typedElement

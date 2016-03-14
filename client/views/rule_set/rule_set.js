@@ -20,7 +20,7 @@ Template.rule_set.rendered = function () {
                 "Each question will contain 10 marks"],
             stringsElement: $('#typed-strings'),
             liPlace: $(".li_place"),
-            typeSpeed: 10,
+            typeSpeed: 100,
             arrayPos: 0,
             startDelay: 5000,
             showCursor: false,
@@ -44,8 +44,7 @@ Template.rule_set.rendered = function () {
             // starting callback function before each string
             preStringTyped: function () {
                 var self = this;
-                document.getElementById("indicator").style.animationDuration = Math.round(this.timeReq() / 1000) + "s";
-                $("#indicator").show();
+                var dur = Math.round(this.timeReq() / 1000);
 
             }
         });
