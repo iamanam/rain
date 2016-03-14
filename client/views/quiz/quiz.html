@@ -9,12 +9,12 @@
 
                 <form class="question">
                     {{#with questionSet}}
-                        <label class="question_label"><i class="fa fa-modx">⁖›</i> {{qs}}</label>
+                        <label class="question_label"><i class="fa fa-modx"></i> {{qs}}</label>
                         {{#if option}}
                             <ul class="fa-ul">
                                 {{#each item in option}}
                                     <li class="fa" data-mark={{item.val}}>
-                                        ≫<label class="option-val" for="f-option">{{item.title}}</label>
+                                        <label class="option-val" for="f-option">{{item.title}}</label>
                                     </li>
                                 {{/each}}
 
