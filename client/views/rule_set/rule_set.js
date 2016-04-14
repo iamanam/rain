@@ -38,7 +38,7 @@ Template.rule_set.rendered = function () {
             onStringTyped: function () {
                 $("#indicator").hide();
                 let li = this.strings[this.arrayPos];
-                this.liPlace.prepend("<li class='animated slideInRight li_rule'><i class='fa-li fa fa-check-square'>⚛</i>" + li + "</li>");
+                this.liPlace.prepend("<li class='animated slideInRight li_rule'><i class='fa-li fa fa-check-square'></i>" + li + "</li>");
                 this.arrayPos++;
             },
             // starting callback function before each string
