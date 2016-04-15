@@ -38,6 +38,6 @@ Template.review.events({
       console.log(this, e);
       $(this).addClass("animated flipOutX");
     });
-    console.log(t);
+
   }
-})
+});

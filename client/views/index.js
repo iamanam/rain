@@ -9,7 +9,6 @@ if (Meteor.isClient) {
         "use strict";
         var self = this;
         var image = document.getElementById('background');
-        console.log(image);
         var downloadImg = new Image();
         downloadImg.onload = function () {
             image.src = this.src;
@@ -21,7 +20,5 @@ if (Meteor.isClient) {
             engine.rain([[3, 3, 0.1]], 33);
         };
         downloadImg.src = "/images/1.jpg";
-
-
     };
 }
