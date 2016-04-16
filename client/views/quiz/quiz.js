@@ -10,6 +10,16 @@ Template.quiz.helpers({
   }
 });
 
+Template.step.onRendered (function () {
+  let l = Object.keys(qsData).length;
+  let store = "";
+  for (var i = 0; i <= l; i++) {
+    store += "<span class='fa fa-2x'><i class='fa fa-circle-o'></i></span>";
+  }
+  let stepHolder = this.$("#stephold");
+  stepHolder.html(store);
+});
+
 
 Template.quiz.events({
   "submit .question, click li": (event, tem)=> {
@@ -19,7 +29,8 @@ Template.quiz.events({
     answerSet.push(qusAns);//save the answer
     //go to next step
     mark += parseInt(qusAns);
-    //tem.$("span").eq(tem.counter.get()).find("i");
+    let x=tem.$("#stephold span").eq(tem.counter.get()).find("i").removeClass("fa-circle-o").addClass("fa-circle");
+    console.log(x);
     tem.counter.set(tem.counter.get() + 1);
   }
 });

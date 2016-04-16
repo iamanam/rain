@@ -19,12 +19,35 @@ body
     z-index -1
 
   header, footer
-    flex-basis 8%
+    height 50px
     left 0
 
   header
     top 0
     background-color rgba(96, 125, 139, 0.46)
+    position relative
+    z-index 10000
+    section.login
+      width 100px
+      display block
+      position relative
+      height 100%
+      &:hover,&:hover *
+        .hidden-form
+          display block
+      .hidden-form
+        display none
+        height 200px
+        width 200px
+        background yellow
+      #login-buttons
+        display block
+        padding 2vw
+        font-size 1.5vw
+        height 100%
+        width 100px
+        background aliceblue
+        color black
 
   .container
     flex-basis 100% - header_footer_height

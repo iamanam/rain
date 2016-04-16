@@ -12,15 +12,15 @@ Template.rule_set.rendered = function () {
     $(function () {
         $("#typed").typed({
             strings: [
-                "Based on your answer you can see an outcome between two outcome",
-                "One will be in my favor and another against",
-                "Those outcome will explain my view about you",
-                "So Be honest",
-                "Only one chance to choose the right things! You can't play again.",
-                "Each question will contain 10 marks"],
+                "There will be only few question to decide our future.",
+                "You won't get any chance to replay any question more than one time.",
+                "So select wisely and put your honest view.",
+                "Based on your answers,i will speak out my thought.",
+                "Everything happens automatically, so eveything here is pre determined.",
+                "Good luck!!"],
             stringsElement: $('#typed-strings'),
             liPlace: $(".li_place"),
-            typeSpeed: 100,
+            typeSpeed: 300,
             arrayPos: 0,
             startDelay: 5000,
             showCursor: false,

@@ -3,13 +3,13 @@
         {{#animate type="lightSpeedIn" delay="500"}}
             <div class="form_container">
                 <div class="intro">
-                    <h3>Lets play..</h3>
+                    <h3>Lets start..</h3>
 
                 </div>
 
                 <form class="question">
                     {{#with questionSet}}
-                        <label class="question_label"><i class="fa fa-modx"></i> {{qs}}</label>
+                        <label class="question_label"><i class="fa fa-dot-circle-o"></i> {{qs}}</label>
                         {{#if option}}
                             <ul class="fa-ul">
                                 {{#each item in option}}
@@ -19,13 +19,16 @@
                                 {{/each}}
 
                             </ul>
+                            <label class="tips animated flash"><i class="fa fa-hand-o-right"></i> Click any of those to
+                                proceed.</label>
                         {{else}}
                             <input type="number" class="ans style_1" required min="0" max="10"
-                                   placeholder="type your answer please">
+                                   placeholder="1-10">
                             <input type="submit" value="Submit">
+                            <label class="tips animated  flash">** Tips:Select a number between 1-10.</label>
+
                         {{/if}}
                     {{/with}}
-
                 </form>
                 {{>step}}
             </div>
@@ -35,10 +38,5 @@
 </template>
 <template name="step">
     <div id="stephold">
-        {{#each questionSet}}
-            <span class="fa fa-2x" data-id="{{@index}}"><i class="fa fa-square-o"></i>
-</span>
-        {{/each}}
-
     </div>
 </template>

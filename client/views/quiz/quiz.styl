@@ -16,28 +16,31 @@
         border-radius 4vw
 
     form.question
-      width 80%
+      width 90%
       margin 3vw auto
-      padding 2vw
       border 2px solid gainsboro
-      min-height 165px
-      border-radius(1vw)
+      min-height 185px
+      position relative
+      text-transform capitalize
+      & *
+        padding 10px
       input[type="number"]
-        display block
+        display inline-block
         width 15%
-        height 40px
-        margin 15px 30px
+        height 30px
+        margin 15px 20px
         transition border 0.3s
         text-align center
-        font-size 1vw
-        border-radius(1vw)
+        font-size 1.5vw
+        padding 5px
+        border-radius(.5vw)
         &:focus
           outline none
           border: solid 2px #969696;
       input[type="submit"]
         width 50%
         display block
-        margin 0 auto
+        margin 10px auto
         padding 10px
         transition border 0.5s
         border none
@@ -49,8 +52,9 @@
 
       .question_label
         font-size 2vw
-        display block
+        display inline-block
         padding 5px
+        color white
         &:after
           content "?"
 
@@ -62,6 +66,7 @@
         display flex
         li
           flex-basis 25%
+          cursor pointer
           flex-wrap wrap
           flex-grow 1
           padding 10px
@@ -80,14 +85,34 @@
             font-size 110%
             &:before
               content "\f111"
+            label
+              cursor pointer
+    label.tips
+      position absolute
+      bottom 0
+      width 100%
+      box-sizing border-box
+      font-style oblique
+      color #FFEB3B
+      font-size 18px
+      animation-duration 4s
+      background #795548
+      height 40px
+      padding 5px
+      text-align center
+
     #stephold
       display flex
       flex-direction row
       flex-basis 100%
+      justify-content center
       span
         margin 5px
-        i.fa-square
-          transition all 1s 0s;
+        i
+          color #FFEB3B
+        i.fa-circle
+          animation flash 2s linear .5s
+
 
 
 
