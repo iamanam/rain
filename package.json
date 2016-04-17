@@ -1,10 +1,10 @@
 {
   "name": "get-rainy",
   "version": "0.0.1",
-  "repository":"https://github.com/iamanam/rain.git",
-  "description":"Its a personal website to propose my girl called Rain..Just a fun project.",
-  "engines":{
-    "node":""
+  "repository": "https://github.com/iamanam/rain.git",
+  "description": "Its a personal website to propose my girl called Rain..Just a fun project.",
+  "engines": {
+    "node": "0.12.7"
   },
   "dependencies": {
     "meteor-node-stubs": "^0.2.3"
