@@ -24,7 +24,7 @@ Template.rule_set.rendered = function () {
       liPlace: $(".li_place"),
       typeSpeed: 100,
       arrayPos: 0,
-      startDelay: 5000
+      startDelay: 5000,
       showCursor: false,
       timeReq: function () {
         return this.strings[this.arrayPos].length * this.typeSpeed;
