@@ -5,5 +5,8 @@
   "description": "Its a personal website to propose my girl called Rain..Just a fun project.",
   "dependencies": {
     "meteor-node-stubs": "^0.2.3"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9"
   }
 }

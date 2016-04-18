@@ -1,8 +1,0 @@
-{
-  "name": "rain",
-  "version": "0.0.1",
-  "dependencies": {
-    "typed.js": "1.1.1"
-  },
-  "private": true
-}
