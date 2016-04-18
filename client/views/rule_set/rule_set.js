@@ -18,7 +18,6 @@ Template.rule_set.rendered = function () {
                 "Based on your answers,i will speak out my thought.",
                 "Everything happens automatically, so eveything here is pre determined.",
                 "Good luck!!"],
-            stringsElement: $('#typed-strings'),
             liPlace: $(".li_place"),
             typeSpeed: 300,
             arrayPos: 0,
